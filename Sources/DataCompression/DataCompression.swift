@@ -235,7 +235,7 @@ public extension Data
             return perform(config, source: ptr.advanced(by: pos), sourceSize: limit - pos)
         }
         
-        return inflated
+        return cresult
     }
     
     /// Calculate the Adler32 checksum of the data.
