@@ -235,9 +235,6 @@ public extension Data
             return perform(config, source: ptr.advanced(by: pos), sourceSize: limit - pos)
         }
         
-        guard let inflated = cresult                                   else { return nil }
-        guard ftr.isize == UInt32(truncatingIfNeeded: inflated.count)  else { return nil }
-        guard ftr.crc32 == inflated.crc32().checksum                   else { return nil }
         return inflated
     }
     
